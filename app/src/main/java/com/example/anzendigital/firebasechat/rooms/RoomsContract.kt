@@ -1,4 +1,4 @@
-package com.example.anzendigital.firebasechat.Rooms
+package com.example.anzendigital.firebasechat.rooms
 
 import com.example.anzendigital.firebasechat.common.BasePresenter
 import com.example.anzendigital.firebasechat.models.RoomChat

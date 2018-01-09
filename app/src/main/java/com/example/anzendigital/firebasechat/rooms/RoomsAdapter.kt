@@ -1,4 +1,4 @@
-package com.example.anzendigital.firebasechat.Rooms
+package com.example.anzendigital.firebasechat.rooms
 
 import android.graphics.Color
 import android.support.v7.widget.RecyclerView

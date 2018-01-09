@@ -1,4 +1,4 @@
-package com.example.anzendigital.firebasechat.Chat
+package com.example.anzendigital.firebasechat.chat
 
 import com.example.anzendigital.firebasechat.models.Message
 import com.example.anzendigital.firebasechat.models.User

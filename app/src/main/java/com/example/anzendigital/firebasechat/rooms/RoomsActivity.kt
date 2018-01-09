@@ -1,4 +1,4 @@
-package com.example.anzendigital.firebasechat.Rooms
+package com.example.anzendigital.firebasechat.rooms
 
 import android.content.Intent
 import android.os.Bundle
@@ -6,9 +6,9 @@ import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
 import android.view.Menu
 import android.view.MenuItem
-import com.example.anzendigital.firebasechat.Chat.ChatActivity
-import com.example.anzendigital.firebasechat.Login.LoginActivity
-import com.example.anzendigital.firebasechat.Profile.ProfileActivity
+import com.example.anzendigital.firebasechat.chat.ChatActivity
+import com.example.anzendigital.firebasechat.login.LoginActivity
+import com.example.anzendigital.firebasechat.profile.ProfileActivity
 import com.example.anzendigital.firebasechat.R
 import com.example.anzendigital.firebasechat.common.toast
 import com.example.anzendigital.firebasechat.models.RoomChat

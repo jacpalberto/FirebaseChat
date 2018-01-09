@@ -1,4 +1,4 @@
-package com.example.anzendigital.firebasechat.Login
+package com.example.anzendigital.firebasechat.login
 
 import com.google.firebase.auth.FirebaseAuth
 

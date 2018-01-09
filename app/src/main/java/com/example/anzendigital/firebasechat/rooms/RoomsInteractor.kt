@@ -1,4 +1,4 @@
-package com.example.anzendigital.firebasechat.Rooms
+package com.example.anzendigital.firebasechat.rooms
 
 import android.util.Log
 import com.example.anzendigital.firebasechat.models.RoomChat

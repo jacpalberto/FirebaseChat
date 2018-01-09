@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/white"
-    tools:context="com.example.anzendigital.firebasechat.Rooms.RoomsActivity">
+    tools:context="com.example.anzendigital.firebasechat.rooms.RoomsActivity">
 
     <android.support.design.widget.AppBarLayout
         android:id="@+id/appBarLayout"

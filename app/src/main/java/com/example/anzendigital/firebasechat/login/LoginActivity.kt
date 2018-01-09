@@ -1,10 +1,10 @@
-package com.example.anzendigital.firebasechat.Login
+package com.example.anzendigital.firebasechat.login
 
 import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.View
-import com.example.anzendigital.firebasechat.Rooms.RoomsActivity
+import com.example.anzendigital.firebasechat.rooms.RoomsActivity
 import com.example.anzendigital.firebasechat.R
 import com.example.anzendigital.firebasechat.common.clearText
 import com.example.anzendigital.firebasechat.common.strValue

@@ -1,4 +1,4 @@
-package com.example.anzendigital.firebasechat.Login
+package com.example.anzendigital.firebasechat.login
 
 /**
  * Created by anzendigital on 12/20/17.

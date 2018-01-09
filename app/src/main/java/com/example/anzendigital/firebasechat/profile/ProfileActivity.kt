@@ -1,4 +1,4 @@
-package com.example.anzendigital.firebasechat.Profile
+package com.example.anzendigital.firebasechat.profile
 
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
