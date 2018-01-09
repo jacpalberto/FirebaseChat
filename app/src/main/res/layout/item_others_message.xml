@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="5dp"
+    android:layout_marginEnd="80dp"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="80dp"
+    android:layout_marginStart="5dp"
+    android:layout_marginTop="5dp"
+    android:background="@drawable/custom_text_view_others_message"
+    android:padding="5dp">
+
+    <TextView
+        android:id="@+id/tvFromUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="3dp"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="jacpalberto@hotmail.com" />
+
+
+    <TextView
+        android:id="@+id/tvMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="4dp"
+        android:textColor="@android:color/black"
+        android:textSize="15sp"
+        app:layout_constraintTop_toBottomOf="@+id/tvFromUser"
+        tools:text="Texto dummy Texto dummy a s Texto dummy Texto dummy Texto dummy Texto dummy Texto dummy Texto dummy Texto dummy Texto dummy Texto dummy" />
+
+    <TextView
+        android:id="@+id/tvTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@id/tvMessage"
+        android:layout_alignRight="@id/tvMessage"
+        android:layout_below="@+id/tvMessage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvMessage"
+        tools:text="12:30" />
+</android.support.constraint.ConstraintLayout>
