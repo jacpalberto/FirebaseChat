@@ -17,6 +17,7 @@ import kotlinx.android.synthetic.main.activity_rooms.*
 
 class RoomsActivity : AppCompatActivity(), RoomsContract.View {
     private val presenter by lazy { RoomsPresenter(this, RoomsInteractor()) }
+    lateinit private var adapter : RoomsAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,13 +35,15 @@ class RoomsActivity : AppCompatActivity(), RoomsContract.View {
     }
 
     override fun showRooms(rooms: List<RoomChat?>) {
-        rvRooms.adapter = RoomsAdapter(rooms) {
+        adapter = RoomsAdapter(rooms) {
             val intent = Intent(this, ChatActivity::class.java)
             intent.putExtra("id", it.id)
             intent.putExtra("description", it.description)
             intent.putExtra("name", it.name)
+            adapter.removeAllListeners()
             startActivity(intent)
         }
+        rvRooms.adapter = adapter
     }
 
     private fun initToolbar() {

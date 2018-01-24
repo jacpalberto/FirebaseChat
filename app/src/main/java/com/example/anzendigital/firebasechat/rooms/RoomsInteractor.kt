@@ -8,8 +8,8 @@ import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 
 /**
- * Created by anzendigital on 12/27/17.
- */
+* Created by Alberto Carrillo on 12/27/17.
+*/
 class RoomsInteractor : RoomsContract.Interactor {
     lateinit private var presenter: RoomsContract.Presenter
     private val database = FirebaseDatabase.getInstance()
@@ -24,7 +24,7 @@ class RoomsInteractor : RoomsContract.Interactor {
     }
 
     override fun removeRoomsListener() {
-        roomRef.orderByChild("name").removeEventListener(roomsListener)
+        roomRef.removeEventListener(roomsListener)
     }
 
     private val roomsListener = object : ValueEventListener {
