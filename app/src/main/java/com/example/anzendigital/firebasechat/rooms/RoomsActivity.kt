@@ -6,18 +6,18 @@ import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
 import android.view.Menu
 import android.view.MenuItem
-import com.example.anzendigital.firebasechat.chat.ChatActivity
-import com.example.anzendigital.firebasechat.login.LoginActivity
-import com.example.anzendigital.firebasechat.profile.ProfileActivity
 import com.example.anzendigital.firebasechat.R
+import com.example.anzendigital.firebasechat.chat.ChatActivity
 import com.example.anzendigital.firebasechat.common.toast
+import com.example.anzendigital.firebasechat.login.LoginActivity
 import com.example.anzendigital.firebasechat.models.RoomChat
+import com.example.anzendigital.firebasechat.profile.ProfileActivity
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_rooms.*
 
 class RoomsActivity : AppCompatActivity(), RoomsContract.View {
     private val presenter by lazy { RoomsPresenter(this, RoomsInteractor()) }
-    lateinit private var adapter : RoomsAdapter
+    lateinit private var adapter: RoomsAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
