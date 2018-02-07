@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
+import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import com.example.jacpalberto.firebasechat.R
@@ -66,6 +67,7 @@ class RoomsActivity : AppCompatActivity(), RoomsContract.View {
                 true
             }
             R.id.logout -> {
+                Log.d("Logging off",FirebaseAuth.getInstance().currentUser.toString())
                 FirebaseAuth.getInstance().signOut()
                 startActivity(Intent(this, LoginActivity::class.java)
                         .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK))

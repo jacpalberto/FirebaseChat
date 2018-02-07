@@ -23,7 +23,7 @@ class LoginActivity : AppCompatActivity(), LoginContract.View {
     }
 
     private fun init() {
-        mAuth.currentUser.let {
+        if (mAuth.currentUser != null) {
             startActivity(Intent(this, RoomsActivity::class.java)
                     .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK))
         }

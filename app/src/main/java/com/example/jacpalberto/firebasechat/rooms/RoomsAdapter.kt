@@ -33,7 +33,7 @@ class RoomsAdapter(private val students: List<RoomChat?>, private val function: 
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         private val database = FirebaseDatabase.getInstance()
-        private lateinit var roomId: String
+        private var roomId: String? = null
         private val chatRef by lazy { database.getReference("rooms/$roomId") }
 
         companion object {
@@ -49,7 +49,7 @@ class RoomsAdapter(private val students: List<RoomChat?>, private val function: 
             tvRoomTitle.text = roomChat?.name
             tvDescription.text = roomChat?.description
             rlItemRoom.setOnClickListener { roomChat?.let { function(it) } }
-            roomId = roomChat?.id!!
+            roomId = roomChat?.id
             val enterUserRef = chatRef.child("user")
             val userCountListener = object : ValueEventListener {
                 override fun onCancelled(p0: DatabaseError?) {

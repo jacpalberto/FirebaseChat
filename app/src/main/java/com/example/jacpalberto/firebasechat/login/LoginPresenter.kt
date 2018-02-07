@@ -5,6 +5,9 @@ package com.example.jacpalberto.firebasechat.login
 */
 class LoginPresenter(private val view: LoginContract.View, private val interactor: LoginInteractor) :
         LoginContract.Presenter {
+    init {
+        interactor.setPresenter(this)
+    }
 
     override fun errorLoggingIn(localizedMessage: String) {
         view.showMessage(localizedMessage)
