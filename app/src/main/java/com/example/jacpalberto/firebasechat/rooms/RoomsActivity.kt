@@ -4,7 +4,6 @@ import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
-import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import com.example.jacpalberto.firebasechat.R
@@ -29,20 +28,24 @@ class RoomsActivity : AppCompatActivity(), RoomsContract.View {
     private fun init() {
         initToolbar()
         initRvRooms()
-        presenter.fetchRooms()
     }
 
     private fun initRvRooms() {
         rvRooms.layoutManager = LinearLayoutManager(this)
     }
 
+    override fun onResume() {
+        super.onResume()
+        presenter.fetchRooms()
+    }
+
     override fun showRooms(rooms: List<RoomChat?>) {
         adapter = RoomsAdapter(rooms) {
+            adapter.removeUsersCounter()
             val intent = Intent(this, ChatActivity::class.java)
             intent.putExtra("id", it.id)
             intent.putExtra("description", it.description)
             intent.putExtra("name", it.name)
-            adapter.removeAllListeners()
             startActivity(intent)
         }
         rvRooms.adapter = adapter
@@ -67,7 +70,6 @@ class RoomsActivity : AppCompatActivity(), RoomsContract.View {
                 true
             }
             R.id.logout -> {
-                Log.d("Logging off",FirebaseAuth.getInstance().currentUser.toString())
                 FirebaseAuth.getInstance().signOut()
                 startActivity(Intent(this, LoginActivity::class.java)
                         .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK))

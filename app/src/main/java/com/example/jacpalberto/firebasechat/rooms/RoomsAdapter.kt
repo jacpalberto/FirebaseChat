@@ -2,6 +2,7 @@ package com.example.jacpalberto.firebasechat.rooms
 
 import android.graphics.Color
 import android.support.v7.widget.RecyclerView
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -27,13 +28,13 @@ class RoomsAdapter(private val students: List<RoomChat?>, private val function: 
         return ViewHolder(layoutInflater.inflate(R.layout.item_room, parent, false))
     }
 
-    fun removeAllListeners() {
+    fun removeUsersCounter() {
         ViewHolder.removeListeners()
     }
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         private val database = FirebaseDatabase.getInstance()
-        private var roomId: String? = null
+        private lateinit var roomId: String
         private val chatRef by lazy { database.getReference("rooms/$roomId") }
 
         companion object {
@@ -49,7 +50,7 @@ class RoomsAdapter(private val students: List<RoomChat?>, private val function: 
             tvRoomTitle.text = roomChat?.name
             tvDescription.text = roomChat?.description
             rlItemRoom.setOnClickListener { roomChat?.let { function(it) } }
-            roomId = roomChat?.id
+            roomChat?.id.let { roomId = roomChat?.id ?: "" }
             val enterUserRef = chatRef.child("user")
             val userCountListener = object : ValueEventListener {
                 override fun onCancelled(p0: DatabaseError?) {
