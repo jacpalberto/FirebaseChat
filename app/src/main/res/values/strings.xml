@@ -62,4 +62,7 @@
     <string name="new_password">New Password:</string>
     <string name="confirm_password">Confirm Password:</string>
     <string name="active_users">Active users: %s</string>
+    <string name="welcome">Welcome</string>
+    <string name="name_cannot_be_empty">Name field cannot be empty</string>
+    <string name="passwords_cannot_ne_empty">Password fields cannot be empty</string>
 </resources>
